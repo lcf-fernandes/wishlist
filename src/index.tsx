@@ -613,7 +613,7 @@ backgroundColor: "#171F14",
             {}
           ],
 
-          pData: `scA0.gameList`,
+          pData: `sc.A1.wishlist`,
 
           itemElements: [
             
