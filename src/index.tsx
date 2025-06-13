@@ -300,7 +300,7 @@ alignItems: 'center',
 
   // Salva no caminho desejado
   const pass = { keyPath: [path], value: [updatedWishlist] };
-  tools.functions.setVar({ args: '0', pass });
+  tools.functions.setVar({ args: '', pass });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
