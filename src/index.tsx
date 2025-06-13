@@ -282,25 +282,36 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(item) => {
-  const path = "sc.A1.wishlist";
+ arrFunctions: [() => {
+  const wishlist = useData("sc.A1.wishlist") || [];
 
-  // Recupera a wishlist atual (ou cria um array vazio se ainda não existir)
-  const currentWishlist = tools.getCtData("sc.A1.wishlist") || [];
+  const addToWishlist = (item) => {
+    // Verifica se já está na wishlist
+    const alreadyExists = wishlist.some((w) => w.gameID === item.gameID);
+    if (alreadyExists) {
+      console.log("Jogo já está na wishlist.");
+      return;
+    }
 
-  // Verifica se o item já existe na wishlist (evita duplicatas, se quiser)
-  const alreadyExists = currentWishlist.some(w => w.gameID === item.gameID);
-  if (alreadyExists) {
-    console.log("Jogo já está na wishlist.");
-    return;
-  }
+    const updatedWishlist = [...wishlist, item];
 
-  // Cria uma nova lista com o item adicionado
-  const updatedWishlist = [...currentWishlist, item];
+    const path = "sc.A1.wishlist";
+    const pass = { keyPath: [path], value: [updatedWishlist] };
+    tools.functions.setVar({ args: '0', pass });
 
-  // Salva no caminho desejado
-  const pass = { keyPath: [path], value: [updatedWishlist] };
-  tools.functions.setVar({ args: '', pass });
+    console.log("Adicionado com sucesso!");
+  };
+
+  return (
+    <>
+      {/* Sua lista de jogos com botão */}
+      {jogos.map((item) => (
+        <Pressable key={item.gameID} onPress={() => addToWishlist(item)}>
+          <Text>{item.title}</Text>
+        </Pressable>
+      ))}
+    </>
+  );
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
