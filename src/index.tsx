@@ -106,7 +106,25 @@ padding: '10px',
 flex: 1,
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
+
+      URIvariablePath:[`$arg_images.banner`],
+
+      args,
+    }}/>],
 
             args,
           }}/>
