@@ -285,6 +285,8 @@ alignItems: 'center',
  arrFunctions: [(item) => {
     const path2 = "sc.A1.wishlist";
 
+const { thumb, title, normalPrice, salePrice } = item;
+
     // Evita duplicata com base no title (ou use outro campo como gameID)
     const alreadyExists = wishlist.some((i) => i.title === item.title);
     if (alreadyExists) {
@@ -298,8 +300,7 @@ alignItems: 'center',
     // Salva no contexto com setVar
     const pass1 = { keyPath: [path2], value: [updatedList] };
     tools.functions.setVar({ args: '', pass: pass1 });
-  }
-}]
+  }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
