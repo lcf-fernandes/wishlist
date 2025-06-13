@@ -624,7 +624,6 @@ backgroundColor: "#171F14",
             elementsProperties:['{}'],
 
             styles:[`{
-  flexDirection: "row",
   alignItems: "center",
   width: "100%",
 }`],
