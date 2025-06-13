@@ -230,7 +230,7 @@ alignItems: "center",
           ],
 
           children: [
-            `Minha Fila`
+            `Minha Lista`
           ],
 
           args,
@@ -287,7 +287,7 @@ backgroundColor: "#171F14",
           ],
 
           children: [
-            `Jogos Populares`
+            `Minha Lista`
           ],
 
           args,
@@ -453,7 +453,7 @@ alignItems: "center",
           ],
 
           children: [
-            `Minha Fila`
+            `Minha Lista`
           ],
 
           args,
