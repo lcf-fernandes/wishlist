@@ -283,10 +283,9 @@ alignItems: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-  const wishlist = useData("sc.A1.wishlist") || [];
-
   const addToWishlist = (item) => {
     const path2 = "sc.A1.wishlist";
+const wishlist = useData("sc.A1.wishlist") || [];
 
     // Evita duplicata com base no gameID
     const alreadyExists = wishlist.some((i) => i.gameID === item.gameID);
