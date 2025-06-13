@@ -103,7 +103,7 @@ padding: '10px',
             elementsProperties:['{}'],
 
             styles:[`{
-flex: 1,
+width: '50px',
 }`],
 
             functions:[()=>{}],            childrenItems:[
