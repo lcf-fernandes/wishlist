@@ -129,7 +129,8 @@ flex: 1,
             elementsProperties:['{}'],
 
             styles:[`{
-backgroundColor: '#FFF',
+backgroundColor: '#212E1F',
+borderRadius: '10px',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
