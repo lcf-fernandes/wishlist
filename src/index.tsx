@@ -285,8 +285,6 @@ alignItems: 'center',
  arrFunctions: [(item) => {
     const path2 = "sc.A1.wishlist";
 
-const { thumb, title, normalPrice, salePrice } = item;
-
     // Evita duplicata com base no title (ou use outro campo como gameID)
     const alreadyExists = wishlist.some((i) => i.title === item.title);
     if (alreadyExists) {
