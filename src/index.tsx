@@ -282,10 +282,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [export default function SeuComponente() {
-  const wishlist = useData("sc.A1.wishlist") || [];
-
-  const addToWishlist = (item) => {
+ arrFunctions: [(item) => {
     const path2 = "sc.A1.wishlist";
 
     // Evita duplicata com base no title (ou use outro campo como gameID)
@@ -302,10 +299,7 @@ alignItems: 'center',
     const pass1 = { keyPath: [path2], value: [updatedList] };
     tools.functions.setVar({ args: '', pass: pass1 });
   };
-
-  return null; // substitua pelo seu layout ou chame essa função num botão
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
