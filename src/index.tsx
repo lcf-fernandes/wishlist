@@ -507,23 +507,35 @@ alignItems: "center",
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
   try {
-    const requestOptions = {
+    const response = await fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&pageSize=100", {
       method: "GET",
       redirect: "follow",
-    };
+    });
 
-    const response = await fetch("https://www.cheapshark.com/api/1.0/deals", requestOptions);
-    const result = await response.json(); // <- Pega os dados como JSON corretamente
+    const result = await response.json();
 
-    console.log(result); // Mostra os dados da API no console
+    // Filtra para manter apenas uma oferta por jogo (pelo lower price)
+    const uniqueGames = {};
+
+    result.forEach((deal) => {
+      const gameID = deal.gameID;
+
+      if (!uniqueGames[gameID] || parseFloat(deal.salePrice) < parseFloat(uniqueGames[gameID].salePrice)) {
+        uniqueGames[gameID] = deal;
+      }
+    });
+
+    const bestDeals = Object.values(uniqueGames);
+
+    console.log(bestDeals); // Mostra somente as melhores ofertas únicas por jogo
 
     const path1 = "scA0.gameList";
-    const value = result; 
-    const pass1 = { keyPath: [path1], value: [value] };
+    const pass1 = { keyPath: [path1], value: [bestDeals] };
 
     tools.functions.setVar({ args: "", pass: pass1 });
+
   } catch (error) {
-    console.log("Erro ao buscar dados:", error);
+    console.log("Erro ao buscar jogos:", error);
   }
 }]
  , trigger: 'on init'
