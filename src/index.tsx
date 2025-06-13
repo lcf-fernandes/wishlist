@@ -153,6 +153,34 @@ flex: 1,
 
           args,
 
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  color: "#FFF",
+  fontSize: 10,
+}`
+          ],
+
+          children: [
+            `$arg_normalPrice`
+          ],
+
+          args,
+
         }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -172,6 +200,10 @@ flex: 1,
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
