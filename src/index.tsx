@@ -626,7 +626,6 @@ backgroundColor: "#171F14",
             styles:[`{
   alignItems: "center",
   width: "100%",
-  paddingHeight: 20,
 }`],
 
             functions:[async (...args) =>
