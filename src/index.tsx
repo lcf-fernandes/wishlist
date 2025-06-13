@@ -155,6 +155,7 @@ flex: 1,
 backgroundColor: '#212E1F',
 borderRadius: '10px',
 padding: '5px',
+alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
