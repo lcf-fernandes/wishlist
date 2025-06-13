@@ -284,7 +284,7 @@ alignItems: 'center',
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
 
-getCtData 
+tools.functions.getCtData() 
 
 
 }]
