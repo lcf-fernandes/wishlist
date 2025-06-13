@@ -322,7 +322,7 @@ width: "100%",
             elementsProperties:['{}'],
 
             styles:[`{
-height: '20px'
+height: '40px'
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
