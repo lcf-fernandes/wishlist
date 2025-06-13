@@ -176,7 +176,7 @@ flexDirection: 'row',
           ],
 
           children: [
-            `$arg_normalPrice`
+            `Preço normal:`
           ],
 
           args,
