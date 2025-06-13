@@ -283,14 +283,25 @@ alignItems: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(item) => {
-  const path2 = "sc.A1.wishlist";
+  const path = "sc.A1.wishlist";
 
-  const { thumb, title, normalPrice, salePrice } = item;
+  // Recupera a wishlist atual (ou cria um array vazio se ainda não existir)
+  const currentWishlist = tools.getCtData(path) || [];
 
-  const pass1 = { keyPath: [path2], value: [item] };
-  tools.functions.setVar({ args: '0', pass: pass1 });
-}
-]
+  // Verifica se o item já existe na wishlist (evita duplicatas, se quiser)
+  const alreadyExists = currentWishlist.some(w => w.gameID === item.gameID);
+  if (alreadyExists) {
+    console.log("Jogo já está na wishlist.");
+    return;
+  }
+
+  // Cria uma nova lista com o item adicionado
+  const updatedWishlist = [...currentWishlist, item];
+
+  // Salva no caminho desejado
+  const pass = { keyPath: [path], value: [updatedWishlist] };
+  tools.functions.setVar({ args: '0', pass });
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
