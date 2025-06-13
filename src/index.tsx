@@ -282,28 +282,15 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [(item) => {
   const path2 = "sc.A1.wishlist";
 
-  const addToWishlist = (item) => {
-    const alreadyExists = wishlist.some((i) => i.gameID === item.gameID);
-    if (alreadyExists) {
-      console.log("Item já está na wishlist.");
-      return;
-    }
+  const { thumb, title, normalPrice, salePrice } = item;
 
-    const updatedList = [...wishlist, item];
-    const pass1 = { keyPath: [path2], value: [updatedList] };
-    tools.functions.setVar({ args: '', pass: pass1 });
-  };
-
-  // Exemplo de uso:
-  return (
-    <Pressable onPress={() => addToWishlist({ gameID: '123', title: 'Halo Infinite' })}>
-      <Text>Adicionar à Wishlist</Text>
-    </Pressable>
-  );
-}]
+  const pass1 = { keyPath: [path2], value: [item] };
+  tools.functions.setVar({ args: '', pass: pass1 });
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
