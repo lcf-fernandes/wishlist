@@ -260,14 +260,14 @@ alignItems: "center",
     console.log(result); // Mostra os dados da API no console
 
     const path1 = "scA0.gameList";
-    const value = result; // <- Agora `value` é o array de dados, não um objeto com { result }
+    const value = result; 
     const pass1 = { keyPath: [path1], value: [value] };
 
     tools.functions.setVar({ args: "", pass: pass1 });
   } catch (error) {
     console.log("Erro ao buscar dados:", error);
   }
-};]
+}]
  , trigger: 'on init'
 }})],
 
