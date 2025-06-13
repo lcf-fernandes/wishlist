@@ -147,7 +147,7 @@ flex: 1,
           ],
 
           children: [
-            `$arg_internalName`
+            `$arg_title`
           ],
 
           args,
