@@ -647,39 +647,11 @@ backgroundColor: "#171F14",
   justifyContent: "center",
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -710,103 +682,7 @@ xmlns="http://www.w3.org/2000/svg"
 
             args,
           }}/>
-        , 
-
- (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
-  const [userName, setUserName] = React.useState("");
-  const [userPassword, setUserPassword] = React.useState("");
-  const [mensagemErro, setMensagemErro] = React.useState("");
-  const handleLogin = () => {
-    if (!userName.trim()) {
-      setMensagemErro("O nome de usuário precisa ser preenchido.");
-      return;
-    }
-    if (!userPassword.trim()) {
-      setMensagemErro("A senha precisa ser preenchida.");
-      return;
-    }
-
-    setMensagemErro("");
-    console.log("Login realizado com sucesso!");
-const path1 = "all.toggles.box1";
-    const value = false;
-    const pass1 = { keyPath: [path1], value: [value] };
-    tools.functions.setVar({ args: "", pass: pass1 });
-  };
-
-  return (
-    <RN.View
-      style={{
-        padding: 20,
-        alignItems: "center",
-        justifyContent: "center",
-       flex: 1,
-      }}
-    >
-      <RN.TextInput
-        placeholder="Nome de usuário"
-        style={{
-          borderWidth: 1,
-          borderColor: "#65686e",
-          paddingVertical: 10,
-          paddingHorizontal: 15,
-          borderRadius: 8,
-          marginBottom: 10,
-        }}
-        value={userName}
-        onChangeText={setUserName}
-      />
-
-      <RN.TextInput
-        placeholder="Senha"
-        style={{
-          borderWidth: 1,
-          borderColor: "#65686e",
-          paddingVertical: 10,
-          paddingHorizontal: 15,
-          borderRadius: 8,
-        }}
-        value={userPassword}
-        onChangeText={setUserPassword}
-        secureTextEntry
-      />
-
-      {mensagemErro !== "" && (
-        <RN.Text
-          style={{
-            color: "red",
-            marginBottom: 10,
-          }}
-        >
-          {mensagemErro}
-        </RN.Text>
-      )}
-
-      <RN.Pressable
-        style={{
-          backgroundColor: "#007BFF",
-          paddingVertical: 12,
-          paddingHorizontal: 24,
-          borderRadius: 8,
-          alignItems: "center",
-        }}
-        onPress={handleLogin}
-      >
-        <RN.Text
-          style={{
-            color: "#FFFFFF",
-            fontSize: 16,
-          }}
-        >
-          Login
-        </RN.Text>
-      </RN.Pressable>
-    </RN.View>
-  );
-}] 
-}}/>
-],
+        ],
 
             args,
           }}/>
