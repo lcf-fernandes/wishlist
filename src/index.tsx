@@ -742,11 +742,11 @@ alignItems: "center",
 </svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`#FFF`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
