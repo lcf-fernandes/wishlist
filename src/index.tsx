@@ -283,7 +283,7 @@ alignItems: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [// Salva um jogo na wishlist
-const addToWishlist = async (game) => {
+async (game) => {
   try {
     const stored = await AsyncStorage.getItem('wishlist');
     const wishlist = stored ? JSON.parse(stored) : [];
