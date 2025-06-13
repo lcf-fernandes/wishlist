@@ -625,7 +625,6 @@ backgroundColor: "#171F14",
 
             styles:[`{
   flexDirection: "row",
-  backgroundColor: "#0064fe",
   alignItems: "center",
   width: "100%",
 }`],
@@ -634,33 +633,7 @@ backgroundColor: "#171F14",
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.box1", "==", true ]]
  , trigger: 'on listen'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-  width: 30,
-  height: 30,
-  alignItems: "center",
-  justifyContent: "center",
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-  flex: 1,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -668,21 +641,16 @@ backgroundColor: "#171F14",
           arrStyles: [
             `{
   color: "#FFF",
-  textAlign: "left",
 }`
           ],
 
           children: [
-            `Minha Tela`
+            `Jogos Populares`
           ],
 
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
