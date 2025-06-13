@@ -619,6 +619,7 @@ backgroundColor: "#171F14",
 }`],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -626,6 +627,45 @@ backgroundColor: "#171F14",
             styles:[`{
   alignItems: "center",
   width: "100%",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.box1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  color: "#FFF",
+  fontSize: 20,
+}`
+          ],
+
+          children: [
+            `Jogos Populares`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+  backgroundColor: "#212E1F",
+  alignItems: "center",
+  width: "100%",
+  padding: "10px",
+  flexDirection: "row",
 }`],
 
             functions:[async (...args) =>
