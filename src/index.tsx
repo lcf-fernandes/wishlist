@@ -282,7 +282,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() {
+ arrFunctions: [() => {
   const wishlist = useData("sc.A1.wishlist") || [];
 
   const addToWishlist = (item) => {
