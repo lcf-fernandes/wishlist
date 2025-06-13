@@ -146,7 +146,7 @@ flex: 1,
           ],
 
           children: [
-            `$arg_storeName`
+            `$arg_internalName`
           ],
 
           args,
