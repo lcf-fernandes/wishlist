@@ -132,6 +132,7 @@ flex: 1,
             styles:[`{
 backgroundColor: '#212E1F',
 borderRadius: '10px',
+padding: '10px',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
