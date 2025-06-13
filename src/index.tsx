@@ -640,6 +640,7 @@ backgroundColor: "#171F14",
           arrStyles: [
             `{
   color: "#FFF",
+  fontSize: 20,
 }`
           ],
 
