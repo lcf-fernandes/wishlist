@@ -245,7 +245,26 @@ alignItems: "center",
           }}/>
         ],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    const res = await fetch(
+      "https://www.cheapshark.com/api/1.0/stores",
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
+
+    console.log({ res });
+  }]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>, 
@@ -506,22 +525,7 @@ alignItems: "center",
           // console.log(initObj);
 
           const arrInitFuncs = [
-            () => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    const res = await fetch(
-      "https://www.cheapshark.com/api/1.0/stores",
-      requestOptions
-    )
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
-
-    console.log({ res });
-  }
+            ()=>{}
           ];
 
           export const useRoutes = create(() => ({ currRoute }));
