@@ -85,7 +85,54 @@ backgroundColor: "#171F14",
           pData: `scA0.gameList`,
 
           itemElements: [
-            (...args:any) => <Elements.Text pass={{
+            
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+flexDirection: 'row'
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+flex: 1,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+flex: 1,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#FFF',
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -95,12 +142,20 @@ backgroundColor: "#171F14",
           ],
 
           children: [
-            `$arg_storeName`
+            `+ Lista`
           ],
 
           args,
 
-        }}/>
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        
           ],
 
       styles:[`{
