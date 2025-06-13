@@ -131,7 +131,7 @@ flex: 1,
 
             styles:[`{
 backgroundColor: '#212E1F',
-borderRadius: '5px',
+borderRadius: '15px',
 padding: '5px',
 }`],
 
