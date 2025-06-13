@@ -247,7 +247,7 @@ alignItems: "center",
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [async () => {
     var requestOptions = {
       method: "GET",
       redirect: "follow",
