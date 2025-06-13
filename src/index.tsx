@@ -77,7 +77,8 @@ backgroundColor: "#171F14",
         (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
-            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
+            arrItems: [
+        (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
@@ -315,7 +316,20 @@ alignItems: 'center',
       styles:[`{
 width: "100%",
 }`],    args,
-        }}/>],
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: '10px'
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
             args,
         }}/>, 
 
