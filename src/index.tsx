@@ -282,16 +282,15 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const path1 = "scA0.gameList";
+ arrFunctions: [(item) => {
   const path2 = "sc.A1.wishlist";
-  const allVal = tools.getCtData(path1);
 
-  const { thumb, title, normalPrice, salePrice } = allVal;
+  const { thumb, title, normalPrice, salePrice } = item;
 
- const pass1 = { keyPath: [path2], value: [allVal] };
- tools.functions.setVar({ args: '0', pass: pass1 });
-}]
+  const pass1 = { keyPath: [path2], value: [item] };
+  tools.functions.setVar({ args: '0', pass: pass1 });
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
