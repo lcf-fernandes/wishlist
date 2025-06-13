@@ -92,7 +92,8 @@ backgroundColor: "#171F14",
 
             styles:[`{
 width: '100%',
-flexDirection: 'row'
+flexDirection: 'row',
+padding: '10px',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -139,7 +140,10 @@ borderRadius: '10px',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+  color: "#FFF",
+  fontSize: 10,
+}`
           ],
 
           children: [
