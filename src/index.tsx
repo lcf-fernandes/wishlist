@@ -112,8 +112,8 @@ flex: 1,
       elementsProperties:[{}],
 
       styles:[{
-width: '150px',
-height: '150px',
+width: '100px',
+height: '100px',
 }],
 
       URIvariablePath:[`$arg_images.banner`],
@@ -143,6 +143,15 @@ flex: 1,
             elementsProperties:['{}'],
 
             styles:[`{
+flex: 1,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 backgroundColor: '#212E1F',
 borderRadius: '10px',
 padding: '5px',
@@ -167,6 +176,10 @@ padding: '5px',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
