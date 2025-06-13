@@ -290,7 +290,7 @@ alignItems: 'center',
   const { thumb, title, normalPrice, salePrice } = allVal;
 
  const pass1 = { keyPath: [path2], value: [allVal] };
- tools.functions.setVar({ args: '', pass: pass1 });
+ tools.functions.setVar({ args: '0', pass: pass1 });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
