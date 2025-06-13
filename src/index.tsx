@@ -666,7 +666,7 @@ backgroundColor: "#171F14",
   width: "100%",
   padding: "10px",
   flexDirection: "row",
-  position: "absolute,
+  position: "absolute",
   bottom: "0px",
 }`],
 
