@@ -133,7 +133,22 @@ height: '100px',
 flex: 1,
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `$arg_storeName`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
