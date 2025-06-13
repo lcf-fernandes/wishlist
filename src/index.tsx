@@ -286,7 +286,7 @@ alignItems: 'center',
   const path = "sc.A1.wishlist";
 
   // Recupera a wishlist atual (ou cria um array vazio se ainda não existir)
-  const currentWishlist = tools.getCtData(path) || [];
+  const currentWishlist = tools.getCtData("sc.A1.wishlist") || [];
 
   // Verifica se o item já existe na wishlist (evita duplicatas, se quiser)
   const alreadyExists = currentWishlist.some(w => w.gameID === item.gameID);
