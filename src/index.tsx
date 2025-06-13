@@ -282,29 +282,11 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [// Salva um jogo na wishlist
-() => {
-  try {
-    const stored = await AsyncStorage.getItem('wishlist');
-    const wishlist = stored ? JSON.parse(stored) : [];
+ arrFunctions: [() => {
 
-    const alreadyExists = wishlist.some(item => item.gameID === game.gameID);
-    if (!alreadyExists) {
-      wishlist.push(game);
-      await AsyncStorage.setItem('wishlist', JSON.stringify(wishlist));
-      console.log('Jogo adicionado à wishlist:', game.title);
-    } else {
-      console.log('Esse jogo já está na wishlist');
-    }
-  } catch (e) {
-    console.error('Erro ao adicionar à wishlist', e);
-  }
-};
+getCtData 
 
-// Lê a wishlist
-const getWishlist = async () => {
-  const stored = await AsyncStorage.getItem('wishlist');
-  return stored ? JSON.parse(stored) : [];
+
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
