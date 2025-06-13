@@ -134,7 +134,8 @@ height: '50px',
 flex: 1,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -148,6 +149,24 @@ flex: 1,
 
           children: [
             `$arg_title`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  color: "#FFF",
+  fontSize: 10,
+}`
+          ],
+
+          children: [
+            `$arg_normalPrice`
           ],
 
           args,
