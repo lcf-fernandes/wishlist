@@ -284,7 +284,7 @@ alignItems: 'center',
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
 
-tools.functions.getCtData() 
+tools.functions.getCtData("scA0.gameList") 
 
 
 }]
