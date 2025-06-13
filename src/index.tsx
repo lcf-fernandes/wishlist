@@ -74,6 +74,41 @@ backgroundColor: "#171F14",
             args,
           }}/>
         , 
+        (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `scA0.gameList`,
+
+          itemElements: [
+            (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `a`
+          ],
+
+          args,
+
+        }}/>
+          ],
+
+      styles:[`{
+width: "100%",
+}`],    args,
+        }}/>],
+            args,
+        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
