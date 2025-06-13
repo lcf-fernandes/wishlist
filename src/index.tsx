@@ -248,25 +248,26 @@ alignItems: "center",
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-    var requestOptions = {
+  try {
+    const requestOptions = {
       method: "GET",
       redirect: "follow",
     };
 
-    const res = await fetch(
-      "https://www.cheapshark.com/api/1.0/stores",
-      requestOptions
-    )
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
+    const response = await fetch("https://www.cheapshark.com/api/1.0/stores", requestOptions);
+    const result = await response.json(); // <- Pega os dados como JSON corretamente
 
+    console.log(result); // Mostra os dados da API no console
 
-const path1 = "scA0.gameList";
-    const value = { result };
+    const path1 = "scA0.gameList";
+    const value = result; // <- Agora `value` é o array de dados, não um objeto com { result }
     const pass1 = { keyPath: [path1], value: [value] };
+
     tools.functions.setVar({ args: "", pass: pass1 });
-  }]
+  } catch (error) {
+    console.log("Erro ao buscar dados:", error);
+  }
+};]
  , trigger: 'on init'
 }})],
 
