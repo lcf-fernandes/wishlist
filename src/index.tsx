@@ -176,7 +176,7 @@ flexDirection: 'row',
           ],
 
           children: [
-            `Preço normal:`
+            `Preço normal: `
           ],
 
           args,
