@@ -282,14 +282,14 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [export default function SeuComponente() {
+ arrFunctions: [export default function getWished() {
   const wishlist = useData("sc.A1.wishlist") || [];
 
   const addToWishlist = (item) => {
     const path2 = "sc.A1.wishlist";
 
-    // Evita duplicata com base no title (ou use outro campo como gameID)
-    const alreadyExists = wishlist.some((i) => i.title === item.title);
+    // Evita duplicata com base no gameID
+    const alreadyExists = wishlist.some((i) => i.gameID === item.gameID);
     if (alreadyExists) {
       console.log("Item já está na wishlist.");
       return;
