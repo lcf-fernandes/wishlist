@@ -261,9 +261,8 @@ alignItems: "center",
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
 
-    console.log({ res });
 
-    tools.functions.setVar({ args: "", pass: { res } });
+    tools.functions.setVar({ args: "", pass: { result } });
   }]
  , trigger: 'on init'
 }})],
