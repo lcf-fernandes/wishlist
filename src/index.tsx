@@ -289,8 +289,7 @@ alignItems: 'center',
 
   const pass1 = { keyPath: [path2], value: [item] };
   tools.functions.setVar({ args: '', pass: pass1 });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
