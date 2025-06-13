@@ -112,8 +112,8 @@ flex: 1,
       elementsProperties:[{}],
 
       styles:[{
-width: '100px',
-height: '100px',
+width: '50px',
+height: '50px',
 }],
 
       URIvariablePath:[`$arg_images.banner`],
