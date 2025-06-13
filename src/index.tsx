@@ -395,7 +395,7 @@ alignItems: "center",
       redirect: "follow",
     };
 
-    const response = await fetch("https://www.cheapshark.com/api/1.0/stores", requestOptions);
+    const response = await fetch("https://www.cheapshark.com/api/1.0/deals", requestOptions);
     const result = await response.json(); // <- Pega os dados como JSON corretamente
 
     console.log(result); // Mostra os dados da API no console
