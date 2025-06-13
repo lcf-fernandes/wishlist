@@ -139,7 +139,10 @@ flex: 1,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+  color: "#FFF",
+  fontSize: 10,
+}`
           ],
 
           children: [
