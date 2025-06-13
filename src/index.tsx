@@ -262,7 +262,10 @@ alignItems: "center",
       .catch((error) => console.log("error", error));
 
 
-    tools.functions.setVar({ args: "", pass: { result } });
+const path1 = "scA0.gameList";
+    const value = { result };
+    const pass1 = { keyPath: [path1], value: [value] };
+    tools.functions.setVar({ args: "", pass: pass1 });
   }]
  , trigger: 'on init'
 }})],
