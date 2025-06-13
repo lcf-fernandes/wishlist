@@ -364,7 +364,7 @@ alignItems: "center",
 
       largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`"#171F14"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
