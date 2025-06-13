@@ -646,7 +646,7 @@ width: '50px',
 height: '50px',
 }],
 
-      URIvariablePath:[`$arg_0.0.0.thumb`],
+      URIvariablePath:[`$arg_item.thumb`],
 
       args,
     }}/>],
