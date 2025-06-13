@@ -111,15 +111,10 @@ flex: 1,
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
-      styles:[
-              {
-                height: "50px",
-                width: "80px",
-                backgroundColor: "#FDFDFD",
-                borderWidth: 2,
-                borderColor: "#EEE"
-              }
-              ],
+      styles:[{
+width: '150px',
+height: '150px',
+}],
 
       URIvariablePath:[`$arg_images.banner`],
 
