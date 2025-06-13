@@ -298,7 +298,7 @@ alignItems: 'center',
     // Salva no contexto com setVar
     const pass1 = { keyPath: [path2], value: [updatedList] };
     tools.functions.setVar({ args: '', pass: pass1 });
-  };
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
