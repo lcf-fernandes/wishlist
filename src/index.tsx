@@ -674,7 +674,18 @@ backgroundColor: "#171F14",
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.box1", "==", true ]]
  , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: "50%",
+alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -682,7 +693,7 @@ backgroundColor: "#171F14",
           arrStyles: [
             `{
   color: "#FFF",
-  fontSize: 20,
+  fontSize: 10,
 }`
           ],
 
@@ -693,6 +704,42 @@ backgroundColor: "#171F14",
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: "50%",
+alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  color: "#FFF",
+  fontSize: 10,
+}`
+          ],
+
+          children: [
+            `Minha Fila`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
