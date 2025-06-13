@@ -287,35 +287,9 @@ alignItems: 'center',
   const path2 = "sc.A1.wishlist";
   const allVal = tools.getCtData(path1);
 
-  const { rendTrib, desMed, irRet, edu, prev, dep } = allVal;
-console.log({irRet});
+  const { thumb, title, normalPrice, salePrice } = allVal;
 
-  const toNum = (str) => parseFloat((str || "0").replace(",", "."));
-
-  const totalDep = toNum(dep) * 2400;
-  const totalDed = toNum(desMed) + toNum(edu) + toNum(prev) + totalDep;
-  const calcBase = Math.max(0, toNum(rendTrib) - totalDed);
-
-  const tabelaIR = tools.getCtData('all.tabelaIR');
-  const faixaEncontrada = tabelaIR.find(faixa => calcBase <= faixa.limite);
-
-const irDevido = Math.max(0, (calcBase * (faixaEncontrada.aliquota / 100)) - faixaEncontrada.deducao);
-
-const resultado = toNum(irRet) - irDevido;
-
-let finalResult;
-if (resultado >= 0) {
-const res1 = "Restituição: R$" + resultado.toFixed(2);
-  console.log( res1 );
-finalResult = res1;
-} else {
-  const res2 = "Imposto a pagar: R$" +  Math.abs(resultado).toFixed(2);
-  console.log( res2 );
-finalResult = res2;
-}
-console.log({finalResult});
-
- const pass1 = { keyPath: [path2], value: [finalResult] };
+ const pass1 = { keyPath: [path2], value: [allVal] };
  tools.functions.setVar({ args: '', pass: pass1 });
 }]
  , trigger: 'on press'
