@@ -1066,7 +1066,15 @@ alignItems: "center",
           }}/>
         ],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`wishlist`],
+            arrFuncs: [()=>{}],
+        }})]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>
