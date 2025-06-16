@@ -1096,7 +1096,11 @@ alignItems: "center",
           // console.log(initObj);
 
           const arrInitFuncs = [
-            ()=>{}
+            async (...args) =>
+  functions.firebase.fireInit({ args, pass:{
+   fbConfig: `all.firebaseConfig`,
+
+        }})
           ];
 
           export const useRoutes = create(() => ({ currRoute }));
