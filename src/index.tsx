@@ -286,9 +286,20 @@ alignItems: 'center',
 (item) => {
   const path2 = "sc.A1.wishlist";
 
-  const { thumb, title, normalPrice, salePrice } = item;
+  const { thumb, title, normalPrice, salePrice, gameID } = item;
 
-  const pass1 = { keyPath: [path2], value: item };
+  // Cria um objeto com os dados organizados
+  const formattedItem = {
+    thumb,
+    title,
+    normalPrice,
+    salePrice,
+    gameID,
+    createdAt: new Date()
+  };
+
+  // Salva no contexto como objeto 
+  const pass1 = { keyPath: [path2], value: formattedItem };
   tools.functions.setVar({ args: '', pass: pass1 });
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
