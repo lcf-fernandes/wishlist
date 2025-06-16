@@ -283,6 +283,7 @@ alignItems: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+() => {
 async (item) => {
   try {
     const { thumb, title, normalPrice, salePrice, gameID } = item;
@@ -303,7 +304,7 @@ async (item) => {
   } catch (error) {
     console.error("Erro ao adicionar item à wishlist:", error);
   }
-};, async (...args) =>
+}, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`wishlist`],
             arrPathData: [`sc.A1.wishlist`],
