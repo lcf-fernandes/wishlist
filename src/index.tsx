@@ -1075,6 +1075,7 @@ alignItems: "center",
         functions.setVar({ args, pass:{
           keyPath: [`scA1.gameList`],
           value: [( () => {
+console.log('findFlat', args );
 tools.findFlatItem([ [{item: {name: "Pedro"}}] ])
 
 } )()]
