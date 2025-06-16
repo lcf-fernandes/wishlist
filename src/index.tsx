@@ -283,26 +283,30 @@ alignItems: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-  // Escuta mudanças na variável sc.A1.wishlist
+  // Hook para acessar os dados da wishlist no contexto
   const wishlist = useData("sc.A1.wishlist") || [];
 
+  // Função para adicionar um item à wishlist
   const addToWishlist = (item) => {
     const path2 = "sc.A1.wishlist";
 
-    // Verifica se o item já está na lista
+    // Verifica se o item já está na lista (evita duplicatas)
     const alreadyExists = wishlist.some((i) => i.gameID === item.gameID);
     if (alreadyExists) {
       console.log("Item já está na wishlist.");
       return;
     }
 
-    // Adiciona o novo item
+    // Cria uma nova lista com o item adicionado
     const updatedList = [...wishlist, item];
 
-    // Salva a lista atualizada no contexto
-    const pass1 = { keyPath: [path2], value: [updatedList] };
+    // Atualiza a variável de contexto
+    const pass1 = {
+      keyPath: [path2],
+      value: [updatedList],
+    };
     tools.functions.setVar({ args: "", pass: pass1 });
-  }
+  };
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
