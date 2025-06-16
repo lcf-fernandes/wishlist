@@ -1071,7 +1071,11 @@ alignItems: "center",
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`wishlist`],
-            arrFuncs: [()=>{}],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`scA1.gameList`],
+          value: [tools.findFlatItem([ [{item: {name: "Pedro"}}] ])]
+        }})],
         }})]
  , trigger: 'on init'
 }})],
