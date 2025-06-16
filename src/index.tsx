@@ -282,34 +282,14 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-() => {
-async (item) => {
-  try {
-    const { thumb, title, normalPrice, salePrice, gameID } = item;
+ arrFunctions: [(item) => {
+  const path2 = "sc.A1.wishlist";
 
-    const wishlistRef = collection(db, "wishlist");
+  const { thumb, title, normalPrice, salePrice } = item;
 
-    // Adiciona o documento com os dados do item
-    await addDoc(wishlistRef, {
-      thumb,
-      title,
-      normalPrice,
-      salePrice,
-      gameID,
-      createdAt: new Date()
-    });
-
-    console.log("Item adicionado à wishlist com sucesso!");
-  } catch (error) {
-    console.error("Erro ao adicionar item à wishlist:", error);
-  }
-}, async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`wishlist`],
-            arrPathData: [`sc.A1.wishlist`],
-            arrFuncs: [()=>{}],
-        }})]
+  const pass1 = { keyPath: [path2], value: [item] };
+  tools.functions.setVar({ args: '', pass: pass1 });
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
