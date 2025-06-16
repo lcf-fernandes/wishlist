@@ -1073,7 +1073,7 @@ alignItems: "center",
    arrRefStrings: [`wishlist`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`scA1.gameList`],
+          keyPath: [`sc.A1.wishlist`],
           value: [args[0]]
         }})],
         }})]
