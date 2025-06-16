@@ -288,7 +288,7 @@ alignItems: 'center',
 
   const { thumb, title, normalPrice, salePrice } = item;
 
-  const pass1 = { keyPath: [path2], value: [item] };
+  const pass1 = { keyPath: [path2], value: [{oi: "tchau"}] };
   tools.functions.setVar({ args: '', pass: pass1 });
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
