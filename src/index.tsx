@@ -293,7 +293,7 @@ alignItems: 'center',
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`wishlist`],
-            arrPathData: [`sc.A1.wishlist`],
+            arrPathData: [`"sc.A1.wishlist"`],
             arrFuncs: [()=>{}],
         }})]
  , trigger: 'on press'
