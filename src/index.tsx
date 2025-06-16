@@ -856,7 +856,7 @@ tools.functions.getCtData()
           ],
 
           children: [
-            `+ Lista`
+            `- Lista`
           ],
 
           args,
