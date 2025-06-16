@@ -282,8 +282,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-(item) => {
+ arrFunctions: [(item) => {
   const path2 = "sc.A1.wishlist";
 
   const { thumb, title, normalPrice, salePrice, gameID } = item;
@@ -301,12 +300,7 @@ alignItems: 'center',
   // Salva no contexto como objeto 
   const pass1 = { keyPath: [path2], value: formattedItem };
   tools.functions.setVar({ args: '', pass: pass1 });
-}, async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`wishlist`],
-            arrPathData: [`sc.A1.wishlist`],
-            arrFuncs: [()=>{}],
-        }})]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
