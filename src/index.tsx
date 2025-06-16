@@ -306,7 +306,7 @@ alignItems: 'center',
       value: [updatedList],
     };
     tools.functions.setVar({ args: "", pass: pass1 });
-  };
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
