@@ -284,9 +284,10 @@ alignItems: 'center',
  functions.funcGroup({ args, pass:{
  arrFunctions: [(item) => {
     const path2 = "sc.A1.wishlist";
+	const wishlist = [];
 
-    // Evita duplicata com base no title (ou use outro campo como gameID)
-    const alreadyExists = wishlist.some((i) => i.title === item.title);
+    // Evita duplicata com base no gameID
+    const alreadyExists = wishlist.some((i) => i.gameID === item.gameID);
     if (alreadyExists) {
       console.log("Item já está na wishlist.");
       return;
