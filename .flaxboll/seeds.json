@@ -1248,7 +1248,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "''",
-              "capsIptCapsTypesToAdd": ["string process"]
+              "capsIptCapsTypesToAdd": ["string process", "custom function"]
             }
           },
           "ccc_fireDeleteData-1": {
@@ -1266,7 +1266,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "() => {}",
-              "capsIptCapsTypesToAdd": ["setVar", "custom capsule"]
+              "capsIptCapsTypesToAdd": ["setVar", "custom function"]
             }
           }
         },
@@ -1332,7 +1332,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "'noPath'",
-              "capsIptCapsTypesToAdd": ["string process"]
+              "capsIptCapsTypesToAdd": ["string process", "custom function"]
             }
           },
           "ccc_fireUpdateDoc-1": {
@@ -1350,7 +1350,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "'noPath'",
-              "capsIptCapsTypesToAdd": ["string process"]
+              "capsIptCapsTypesToAdd": ["string process", "custom function"]
             }
           },
           "ccc_fireUpdateDoc-2": {
@@ -1371,7 +1371,7 @@
               "capsIptCapsTypesToAdd": [
                 "setVar",
                 "console log",
-                "custom capsule"
+                "custom function"
               ]
             }
           }
@@ -1423,7 +1423,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "'noPath'",
-              "capsIptCapsTypesToAdd": ["string process"]
+              "capsIptCapsTypesToAdd": ["string process", "custom function"]
             }
           },
           "ccc_fireGetDocs-1": {
@@ -1444,7 +1444,7 @@
               "capsIptCapsTypesToAdd": [
                 "setVar",
                 "console log",
-                "custom capsule"
+                "custom function"
               ]
             }
           }
@@ -1518,7 +1518,7 @@
               "capsIptCapsTypesToAdd": [
                 "setVar",
                 "console log",
-                "custom capsule"
+                "custom function"
               ]
             }
           }
@@ -1610,7 +1610,7 @@
               "capsIptCapsTypesToAdd": [
                 "setVar",
                 "console log",
-                "custom capsule"
+                "custom function"
               ]
             }
           }
@@ -1991,7 +1991,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "()=>{}",
-              "capsIptCapsTypesToAdd": ["custom capsule"]
+              "capsIptCapsTypesToAdd": ["custom function"]
             }
           },
           "ccc_fetch_B-3": {
@@ -2009,7 +2009,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "()=>{}",
-              "capsIptCapsTypesToAdd": ["custom capsule"]
+              "capsIptCapsTypesToAdd": ["custom function"]
             }
           }
         },
@@ -2185,12 +2185,12 @@
     "capsCodeInfo": {
       "1": {
         "capsLabel": {
-          "pt-br": "Capsula Personalizada",
-          "en": "Custom Capsule"
+          "pt-br": "Função Custom",
+          "en": "Custom Function"
         },
         "capsDescription": { "pt-br": "", "en": "" },
-        "capsCodeTypes": ["function"],
-        "capsCodeText": "!#!custom capsule!#!",
+        "capsCodeTypes": ["function", "custom function"],
+        "capsCodeText": "!#!custom function!#!",
         "capsCodeVersionID": "1",
         "capsCodeInputs": {
           "sss_custom_caps-0": {
@@ -2224,8 +2224,8 @@
     "capsCodeInfo": {
       "1": {
         "capsLabel": {
-          "pt-br": "Capsula Personalizada",
-          "en": "Custom Capsule"
+          "pt-br": "Capsula Personalizada - Elemento",
+          "en": "Custom Capsule - Element"
         },
         "capsDescription": { "pt-br": "", "en": "" },
         "capsCodeTypes": ["Elemento de Tela"],
