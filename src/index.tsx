@@ -637,7 +637,7 @@ backgroundColor: "#171F14",
             {}
           ],
 
-          pData: `sc.A1.wishlist`,
+          pData: `sc.A1.listed`,
 
           itemElements: [
             
@@ -1073,7 +1073,7 @@ alignItems: "center",
    arrRefStrings: [`wishlist`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A1.wishlist`],
+          keyPath: [`sc.A1.listed`],
           value: [args[0]]
         }})],
         }})]
