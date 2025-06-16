@@ -841,8 +841,10 @@ alignItems: 'center',
    arrRefStrings: [
         `wishlist`, (() => {
 console.log({args});
+const item = tools.findFlatItem(args);
+const idToDel = item.docId;
 
-return "id"
+return idToDel;
 })()],
    arrFuncs: [() => {}],
         }})]
