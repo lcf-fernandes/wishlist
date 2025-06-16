@@ -836,11 +836,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(...args) =>
-        functions.firebase.deleteDocTool({ args, pass:{
-   arrRefStrings: [`wishlist`],
-   arrFuncs: [() => {}],
-        }})]
+ arrFunctions: [()=>{}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
