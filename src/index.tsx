@@ -286,9 +286,29 @@ alignItems: 'center',
 (item) => {
   const path2 = "sc.A1.wishlist";
 
-  const { thumb, title, normalPrice, salePrice } = item;
+const findFlatItem = obj => {
+  if (typeof obj !== 'object' || obj === null) return null;
 
-  const pass1 = { keyPath: [path2], value: [{oi: "tchau"}] };
+  if ('item' in obj) return obj.item;
+
+  for (const key in obj) {
+    if (Array.isArray(obj[key])) {
+      for (const element of obj[key]) {
+        const found = findFlatItem(element);
+        if (found) return found;
+      }
+    } else if (typeof obj[key] === 'object') {
+      const found = findFlatItem(obj[key]);
+      if (found) return found;
+    }
+  }
+
+  return null;
+};
+
+const fbValue = findFlatItem(item);
+
+  const pass1 = { keyPath: [path2], value: [fbValue] };
   tools.functions.setVar({ args: '', pass: pass1 });
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
