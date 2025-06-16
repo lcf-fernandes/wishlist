@@ -1074,7 +1074,10 @@ alignItems: "center",
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`scA1.gameList`],
-          value: [tools.findFlatItem([ [{item: {name: "Pedro"}}] ])]
+          value: [( () => {
+tools.findFlatItem([ [{item: {name: "Pedro"}}] ])
+
+} )()]
         }})],
         }})]
  , trigger: 'on init'
