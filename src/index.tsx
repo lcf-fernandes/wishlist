@@ -282,14 +282,20 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(item) => {
+ arrFunctions: [
+(item) => {
   const path2 = "sc.A1.wishlist";
 
   const { thumb, title, normalPrice, salePrice } = item;
 
   const pass1 = { keyPath: [path2], value: [item] };
   tools.functions.setVar({ args: '', pass: pass1 });
-}]
+}, 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("scA1");
+        }
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
