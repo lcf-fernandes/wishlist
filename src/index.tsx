@@ -839,7 +839,7 @@ alignItems: 'center',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `wishlist`, ((args) => {
+        `wishlist`, (() => {
 console.log({args});
 
 return "id"
