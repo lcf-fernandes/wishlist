@@ -283,7 +283,7 @@ alignItems: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-const addToFirebaseWishlist = async (item) => {
+async (item) => {
   try {
     const { thumb, title, normalPrice, salePrice, gameID } = item;
 
