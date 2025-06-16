@@ -290,12 +290,12 @@ alignItems: 'center',
 
   const pass1 = { keyPath: [path2], value: [item] };
   tools.functions.setVar({ args: '', pass: pass1 });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("scA1");
-        }
-        ]
+}, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`wishlist`],
+            arrPathData: [`sc.A1.wishlist`],
+            arrFuncs: [()=>{}],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
