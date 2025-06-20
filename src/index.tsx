@@ -546,7 +546,8 @@ alignItems: "center",
           }}/>
         ],
 
-          functions:[async (...args) =>
+          functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
   try {
@@ -581,6 +582,18 @@ alignItems: "center",
     console.log("Erro ao buscar jogos:", error);
   }
 }]
+ , trigger: 'on init'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`wishlist`],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A1.listed`],
+          value: [args[0]]
+        }})],
+        }})]
  , trigger: 'on init'
 }})],
 
