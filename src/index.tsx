@@ -81,7 +81,46 @@ backgroundColor: "#171F14",
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
+  arrItems: [const [games, setGames] = useState([]);
+const [loading, setLoading] = useState(false);
+
+const fetchDeals = async (filterType) => {
+  setLoading(true);
+  let url = "https://www.cheapshark.com/api/1.0/deals?";
+
+  switch (filterType) {
+    case "store":
+      url += "storeID=1";
+      break;
+    case "lowest":
+      url += "sortBy=Price";
+      break;
+    case "discount":
+      url += "sortBy=Deal%20Rating";
+      break;
+    default:
+      break;
+  }
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    setGames(data);
+
+    // Salva a lista no contexto do Flaxboll em sc.A1.filteredGames
+    const path = "sc.A1.filteredGames";
+    const pass = { keyPath: [path], value: data };
+    tools.functions.setVar({ args: '', pass });
+
+  } catch (error) {
+    console.error("Erro ao buscar dados:", error);
+  } finally {
+    setLoading(false);
+  }
+};
+
+return ();
+] 
 }}/>
 , 
         (...args:any) => <Elements.FlatList2 pass={{
