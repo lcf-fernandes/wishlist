@@ -1148,7 +1148,7 @@ alignItems: "center",
         }}/>, 
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"scA0",
+          pathScreen:"scA2",
 
           styles:[`{
 width: "100%",
