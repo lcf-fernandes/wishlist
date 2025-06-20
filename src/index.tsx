@@ -80,10 +80,18 @@ backgroundColor: "#171F14",
             arrItems: [
         
 
- (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
-}}/>
-, 
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '50px',
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
