@@ -81,38 +81,7 @@ backgroundColor: "#171F14",
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
-  const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchDeals = async (filterType) => {
-    setLoading(true);
-    let url = "https://www.cheapshark.com/api/1.0/deals?";
-
-    switch (filterType) {
-      case "store":
-        url += "storeID=1"; // Steam por exemplo
-        break;
-      case "lowest":
-        url += "sortBy=Price";
-        break;
-      case "discount":
-        url += "sortBy=Deal%20Rating";
-        break;
-      default:
-        break;
-    }
-
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-      setGames(data);
-    } catch (error) {
-      console.error("Erro ao buscar dados:", error);
-    } finally {
-      setLoading(false);
-    }
-  }] 
+  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
 }}/>
 , 
         (...args:any) => <Elements.FlatList2 pass={{
