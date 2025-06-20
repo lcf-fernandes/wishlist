@@ -104,7 +104,7 @@ alignItems: 'center',
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("scA3");
+          return tools.goTo("scA2");
         }
         ]
  , trigger: 'on press'
@@ -121,7 +121,7 @@ alignItems: 'center',
           ],
 
           children: [
-            `A3`
+            `A2`
           ],
 
           args,
