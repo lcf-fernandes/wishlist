@@ -87,7 +87,78 @@ backgroundColor: "#171F14",
 width: '50px',
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#212E1F',
+borderRadius: '10px',
+padding: '5px',
+alignItems: 'center',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+(item) => {
+  const path2 = "sc.A1.wishlist";
+
+const findFlatItem = obj => {
+  if (typeof obj !== 'object' || obj === null) return null;
+
+  if ('item' in obj) return obj.item;
+
+  for (const key in obj) {
+    if (Array.isArray(obj[key])) {
+      for (const element of obj[key]) {
+        const found = findFlatItem(element);
+        if (found) return found;
+      }
+    } else if (typeof obj[key] === 'object') {
+      const found = findFlatItem(obj[key]);
+      if (found) return found;
+    }
+  }
+
+  return null;
+};
+
+const fbValue = findFlatItem(item);
+
+  const pass1 = { keyPath: [path2], value: [fbValue] };
+  tools.functions.setVar({ args: '', pass: pass1 });
+}, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`wishlist`],
+            arrPathData: [`sc.A1.wishlist`],
+            arrFuncs: [()=>{}],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  color: "#FFF",
+  fontSize: 10,
+}`
+          ],
+
+          children: [
+            `A3`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
