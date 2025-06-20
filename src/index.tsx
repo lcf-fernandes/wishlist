@@ -102,39 +102,11 @@ alignItems: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-(item) => {
-  const path2 = "sc.A1.wishlist";
-
-const findFlatItem = obj => {
-  if (typeof obj !== 'object' || obj === null) return null;
-
-  if ('item' in obj) return obj.item;
-
-  for (const key in obj) {
-    if (Array.isArray(obj[key])) {
-      for (const element of obj[key]) {
-        const found = findFlatItem(element);
-        if (found) return found;
-      }
-    } else if (typeof obj[key] === 'object') {
-      const found = findFlatItem(obj[key]);
-      if (found) return found;
-    }
-  }
-
-  return null;
-};
-
-const fbValue = findFlatItem(item);
-
-  const pass1 = { keyPath: [path2], value: [fbValue] };
-  tools.functions.setVar({ args: '', pass: pass1 });
-}, async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`wishlist`],
-            arrPathData: [`sc.A1.wishlist`],
-            arrFuncs: [()=>{}],
-        }})]
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("scA3");
+        }
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
