@@ -1202,8 +1202,8 @@ backgroundColor: "#171F14",
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  const [games, setGames] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
+  const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchDeals = async (filterType) => {
     setLoading(true);
@@ -1234,10 +1234,31 @@ backgroundColor: "#171F14",
     }
   };
 
+  const price =
+    "Preço: $" + item.salePrice + "Normal: $" + item.normalPrice + ")";
+
   return (
     <RN.View style={{ padding: 16 }}>
+      <RN.Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 12 }}>
+        Filtros:
+      </RN.Text>
+
+      <RN.View style={{ marginBottom: 12 }}>
+        <RN.Button
+          title="Filtrar por Loja (Steam)"
+          onPress={() => fetchDeals("store")}
+        />
+      </RN.View>
+
       <RN.View style={{ marginBottom: 12 }}>
         <RN.Button title="Menor Preço" onPress={() => fetchDeals("lowest")} />
+      </RN.View>
+
+      <RN.View style={{ marginBottom: 12 }}>
+        <RN.Button
+          title="Maior Desconto"
+          onPress={() => fetchDeals("discount")}
+        />
       </RN.View>
 
       {loading ? (
@@ -1246,18 +1267,29 @@ backgroundColor: "#171F14",
         <RN.FlatList
           data={games}
           keyExtractor={(item) => item.dealID}
-          renderItem={(props) => {
-            console.log({ props });
-            const item = props.item;
-            console.log({ item });
-
-            return (
-              <RN.View>
-                <RN.Text>{item?.title}</RN.Text>
-                <RN.Text>Preço: {item?.salePrice}</RN.Text>
-              </RN.View>
-            );
-          }}
+          renderItem={({ item }) => (
+            <RN.View
+              style={{
+                marginBottom: 10,
+                padding: 10,
+                borderWidth: 1,
+                borderColor: "#ccc",
+                borderRadius: 6,
+              }}
+            >
+              <RN.Text style={{ fontWeight: "bold", fontSize: 16 }}>
+                {item.title}
+              </RN.Text>
+              <RN.Text>{price}</RN.Text>
+              <RN.Text>
+                Desconto:{" "}
+                {Math.round(
+                  ((item.normalPrice - item.salePrice) / item.normalPrice) * 100
+                )}
+                %
+              </RN.Text>
+            </RN.View>
+          )}
         />
       )}
     </RN.View>
