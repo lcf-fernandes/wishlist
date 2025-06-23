@@ -1334,7 +1334,7 @@ justifyContent: 'center',
                     onPress={() => {
                     
   if (RN.Platform.OS === 'web') {
-window.open("https://www.cheapshark.com/redirect?dealID=" + item.dealID, '_blank');
+window.location.href = "https://www.cheapshark.com/redirect?dealID=" + item.dealID;
   } else {
 RN.Linking.openURL("https://www.cheapshark.com/redirect?dealID=" + item.dealID);
   }
