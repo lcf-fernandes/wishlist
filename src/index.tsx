@@ -1332,7 +1332,7 @@ justifyContent: 'center',
               >
 <RN.Pressable style={buttonStyle}
                     onPress={() => {
-                      
+                    RN.Linking.openURL("https://www.cheapshark.com/redirect?dealID=" + item.dealID);
                     }}
                   >
                     <RN.Text style={buttonTextStyle}>Comprar</RN.Text>
