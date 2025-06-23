@@ -1198,14 +1198,6 @@ backgroundColor: "#171F14",
             styles: [],
             arrProps: [],
             arrItems: [
-        
-
- (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => (
-  
-);] 
-}}/>
-, 
         (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
