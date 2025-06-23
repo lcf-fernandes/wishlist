@@ -1239,7 +1239,7 @@ const buttonStyle = {
     borderRadius: 10,
     padding: 5,
     alignItems: "center",
-    marginBottom: 12,
+    marginBottom: 2,
   };
 
   const buttonTextStyle = {
