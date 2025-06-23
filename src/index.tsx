@@ -1250,7 +1250,6 @@ const buttonStyle = {
   return (
     <RN.View style={{ 
 padding: 10,
-flexDirection: 'row',
 alignItems: 'center',
   }}>
       <RN.Text style={{ color: "#FFF", fontSize: 10, marginBottom: 4 }}>
