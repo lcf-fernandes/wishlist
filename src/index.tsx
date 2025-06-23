@@ -1281,13 +1281,6 @@ backgroundColor: "#171F14",
                 {item.title}
               </RN.Text>
               <RN.Text>{price}</RN.Text>
-              <RN.Text>
-                Desconto:{" "}
-                {Math.round(
-                  ((item.normalPrice - item.salePrice) / item.normalPrice) * 100
-                )}
-                %
-              </RN.Text>
             </RN.View>
           )}
         />
