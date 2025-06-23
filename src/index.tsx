@@ -1240,7 +1240,7 @@ const buttonStyle = {
     padding: 5,
     alignItems: "center",
     marginBottom: 2,
-    marginRight: 1,
+    marginRight: 2,
   };
 
   const buttonTextStyle = {
