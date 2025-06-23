@@ -1239,23 +1239,32 @@ backgroundColor: "#171F14",
 flexDirection: 'row',
 padding: '10px', }}>
       <RN.Text style={{ color: "#FFF",
-  fontSize: 10, }}>
+  fontSize: 12, }}>
         Filtros:
       </RN.Text>
 
       <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button
+        <RN.Button style={{ backgroundColor: '#212E1F',
+borderRadius: '10px',
+padding: '5px',
+alignItems: 'center', }}
           title="Filtrar por Loja (Steam)"
           onPress={() => fetchDeals("store")}
         />
       </RN.View>
 
       <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button title="Menor Preço" onPress={() => fetchDeals("lowest")} />
+        <RN.Button style={{ backgroundColor: '#212E1F',
+borderRadius: '10px',
+padding: '5px',
+alignItems: 'center', }} title="Menor Preço" onPress={() => fetchDeals("lowest")} />
       </RN.View>
 
       <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button
+        <RN.Button style={{ backgroundColor: '#212E1F',
+borderRadius: '10px',
+padding: '5px',
+alignItems: 'center', }}
           title="Maior Desconto"
           onPress={() => fetchDeals("discount")}
         />
