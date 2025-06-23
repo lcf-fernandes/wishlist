@@ -1202,8 +1202,8 @@ backgroundColor: "#171F14",
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [games, setGames] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
 
   const fetchDeals = async (filterType) => {
     setLoading(true);
