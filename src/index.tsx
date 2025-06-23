@@ -1307,6 +1307,7 @@ alignItems: 'center',
                     height: 50,
                     borderRadius: 6,
                     marginRight: 2,
+					marginBottom: 2,
                   }}
                 />
               <RN.View
