@@ -1284,7 +1284,7 @@ alignItems: 'center',
             const price =
               "Preço: $" +
               item.salePrice +
-              "Normal: $" +
+              " (Normal: $" +
               item.normalPrice +
               ")";
             const discount =
