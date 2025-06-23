@@ -1276,9 +1276,6 @@ alignItems: 'center',
 
       {loading ? (
         <RN.ActivityIndicator size="large" />
-<RN.Text style={{ color: "#FFF", marginTop: 10 }}>
-      Carregando ofertas...
-    </RN.Text>
       ) : (
         <RN.FlatList
           data={games}
