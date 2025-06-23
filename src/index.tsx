@@ -1240,21 +1240,25 @@ backgroundColor: "#171F14",
         <RN.Button title="Menor Preço" onPress={() => fetchDeals("lowest")} />
       </RN.View>
 
-      <RN.FlatList
-        data={games}
-        keyExtractor={(item) => item.dealID}
-        renderItem={(props) => {
-          console.log({ props });
-          const item = props.item;
-          console.log({ item });
+      {loading ? (
+        <RN.ActivityIndicator size="large" />
+      ) : (
+        <RN.FlatList
+          data={games}
+          keyExtractor={(item) => item.dealID}
+          renderItem={(props) => {
+            console.log({ props });
+            const item = props.item;
+            console.log({ item });
 
-          return (
-            <RN.View>
-              <RN.Text>{item?.title}</RN.Text>
-            </RN.View>
-          );
-        }}
-      />
+            return (
+              <RN.View>
+                <RN.Text>{item?.title}</RN.Text>
+              </RN.View>
+            );
+          }}
+        />
+      )}
     </RN.View>
   );
 }] 
