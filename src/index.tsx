@@ -1311,11 +1311,7 @@ alignItems: 'center',
                 />
               <RN.View
                 style={{
-                  marginBottom: 10,
-                  padding: 10,
-                  borderWidth: 1,
-                  borderColor: "#ccc",
-                  borderRadius: 6,
+                  flex: 1,
                 }}
               >
                 <RN.Text style={{ fontWeight: "bold", fontSize: 16 }}>
