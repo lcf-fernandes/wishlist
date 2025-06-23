@@ -1238,34 +1238,22 @@ backgroundColor: "#171F14",
     <RN.View style={{ padding: 16 }}>
       <RN.Text style={{ color: "#FFF", fontSize: 12 }}>Filtros:</RN.Text>
 
-      <RN.View
-        onPress={() => fetchDeals("store")}
-      >
-        <RN.Text style={{ color: "#FFF", fontSize: 10 }}>Filtrar por Loja (Steam)</RN.Text>
+      <RN.View style={{ marginBottom: 12 }}>
+        <RN.Button
+          title="Filtrar por Loja (Steam)"
+          onPress={() => fetchDeals("store")}
+        />
       </RN.View>
 
-      <RN.View
-        style={{
-          backgroundColor: "#212E1F",
-          borderRadius: "10px",
-          padding: "5px",
-          alignItems: "center",
-        }}
-        onPress={() => fetchDeals("lowest")}
-      >
-        <RN.Text style={{ color: "#FFF", fontSize: 10 }}>Menor Preço</RN.Text>
+      <RN.View style={{ marginBottom: 12 }}>
+        <RN.Button title="Menor Preço" onPress={() => fetchDeals("lowest")} />
       </RN.View>
 
-      <RN.View
-        style={{
-          backgroundColor: "#212E1F",
-          borderRadius: "10px",
-          padding: "5px",
-          alignItems: "center",
-        }}
-        onPress={() => fetchDeals("discount")}
-      >
-        <RN.Text style={{ color: "#FFF", fontSize: 10 }}>Maior Desconto</RN.Text>
+      <RN.View style={{ marginBottom: 12 }}>
+        <RN.Button
+          title="Maior Desconto"
+          onPress={() => fetchDeals("discount")}
+        />
       </RN.View>
 
       {loading ? (
