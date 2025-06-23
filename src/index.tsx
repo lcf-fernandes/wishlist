@@ -1332,7 +1332,12 @@ justifyContent: 'center',
               >
 <RN.Pressable style={buttonStyle}
                     onPress={() => {
-                    RN.Linking.openURL("https://www.cheapshark.com/redirect?dealID=" + item.dealID);
+                    
+  if (Platform.OS === 'web') {
+window.open("https://www.cheapshark.com/redirect?dealID=" + item.dealID, '_blank');
+  } else {
+RN.Linking.openURL("https://www.cheapshark.com/redirect?dealID=" + item.dealID);
+  }
                     }}
                   >
                     <RN.Text style={buttonTextStyle}>Comprar</RN.Text>
