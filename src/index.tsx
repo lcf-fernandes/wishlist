@@ -1300,6 +1300,15 @@ alignItems: 'center',
                   flexDirection: 'row',
                 }}
               >
+<RN.Image
+                  source={{ uri: item.thumb }}
+                  style={{
+                    width: 80,
+                    height: 80,
+                    borderRadius: 6,
+                    marginRight: 10,
+                  }}
+                />
               <RN.View
                 style={{
                   marginBottom: 10,
