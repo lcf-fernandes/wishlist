@@ -1201,7 +1201,63 @@ backgroundColor: "#171F14",
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
+  arrItems: [() => {
+  const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchDeals = async (filterType) => {
+    setLoading(true);
+    let url = "https://www.cheapshark.com/api/1.0/deals?";
+
+    switch (filterType) {
+      case "store":
+        url += "storeID=1"; // Steam por exemplo
+        break;
+      case "lowest":
+        url += "sortBy=Price";
+        break;
+      case "discount":
+        url += "sortBy=Deal%20Rating";
+        break;
+      default:
+        break;
+    }
+
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      setGames(data);
+    } catch (error) {
+      console.error("Erro ao buscar dados:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <RN.View style={{ padding: 16 }}>
+      <RN.View style={{ marginBottom: 12 }}>
+        <RN.Button title="Menor Preço" onPress={() => fetchDeals("lowest")} />
+      </RN.View>
+
+      <RN.FlatList
+        data={games}
+        keyExtractor={(item) => item.dealID}
+        renderItem={(props) => {
+          console.log({ props });
+          const item = props.item;
+          console.log({ item });
+
+          return (
+            <RN.View>
+              <RN.Text>{item?.title}</RN.Text>
+            </RN.View>
+          );
+        }}
+      />
+    </RN.View>
+  );
+}] 
 }}/>
 , 
         (...args:any) => <Elements.FlatList2 pass={{
