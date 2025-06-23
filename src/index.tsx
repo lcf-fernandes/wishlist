@@ -1254,6 +1254,7 @@ backgroundColor: "#171F14",
             return (
               <RN.View>
                 <RN.Text>{item?.title}</RN.Text>
+                <RN.Text>Preço: {item?.salePrice}</RN.Text>
               </RN.View>
             );
           }}
