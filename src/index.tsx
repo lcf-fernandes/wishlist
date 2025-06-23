@@ -1297,7 +1297,6 @@ alignItems: 'center',
             return (
               <RN.View
                 style={{
-                  flexDirection: 'row',
                   marginBottom: 10,
                   padding: 10,
                   borderWidth: 1,
