@@ -1327,6 +1327,7 @@ alignItems: 'center',
 <RN.View
                 style={{
                   flex: 1,
+justifyContent: 'center',
                 }}
               >
 <RN.Pressable style={buttonStyle}
