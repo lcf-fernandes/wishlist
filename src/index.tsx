@@ -1255,6 +1255,10 @@ padding: 10,
         Filtros:
       </RN.Text>
 
+<RN.View style={{ 
+flexDirection: 'row',
+alignItems: 'center',
+  }}>
       <RN.Pressable style={buttonStyle} onPress={() => fetchDeals("store")}>
         <RN.Text style={buttonTextStyle}>Filtrar por Loja (Steam)</RN.Text>
       </RN.Pressable>
@@ -1266,6 +1270,7 @@ padding: 10,
       <RN.Pressable style={buttonStyle} onPress={() => fetchDeals("discount")}>
         <RN.Text style={buttonTextStyle}>Maior Desconto</RN.Text>
       </RN.Pressable>
+</RN.View>
 
 
       {loading ? (
