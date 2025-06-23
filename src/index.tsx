@@ -1237,7 +1237,7 @@ backgroundColor: "#171F14",
   return (
     <RN.View style={{ width: "100%",
         padding: "10px", }}>
-      <RN.Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 12 }}>
+      <RN.Text style={{ fontSize: 10, fontWeight: "bold", marginBottom: 12 }}>
         Filtros:
       </RN.Text>
 
