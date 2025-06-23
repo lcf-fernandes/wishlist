@@ -1234,27 +1234,37 @@ backgroundColor: "#171F14",
     }
   };
 
+const buttonStyle = {
+    backgroundColor: "#212E1F",
+    borderRadius: 10,
+    padding: 5,
+    alignItems: "center",
+    marginBottom: 12,
+  };
+
+  const buttonTextStyle = {
+    color: "#FFF",
+    fontSize: 10,
+  };
+
   return (
     <RN.View style={{ padding: 16 }}>
-      <RN.Text style={{ color: "#FFF", fontSize: 12 }}>Filtros:</RN.Text>
+      <RN.Text style={{ color: "#FFF", fontSize: 12, marginBottom: 8 }}>
+        Filtros:
+      </RN.Text>
 
-      <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button
-          title="Filtrar por Loja (Steam)"
-          onPress={() => fetchDeals("store")}
-        />
-      </RN.View>
+      <RN.Pressable style={buttonStyle} onPress={() => fetchDeals("store")}>
+        <RN.Text style={buttonTextStyle}>Filtrar por Loja (Steam)</RN.Text>
+      </RN.Pressable>
 
-      <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button title="Menor Preço" onPress={() => fetchDeals("lowest")} />
-      </RN.View>
+      <RN.Pressable style={buttonStyle} onPress={() => fetchDeals("lowest")}>
+        <RN.Text style={buttonTextStyle}>Menor Preço</RN.Text>
+      </RN.Pressable>
 
-      <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button
-          title="Maior Desconto"
-          onPress={() => fetchDeals("discount")}
-        />
-      </RN.View>
+      <RN.Pressable style={buttonStyle} onPress={() => fetchDeals("discount")}>
+        <RN.Text style={buttonTextStyle}>Maior Desconto</RN.Text>
+      </RN.Pressable>
+
 
       {loading ? (
         <RN.ActivityIndicator size="large" />
