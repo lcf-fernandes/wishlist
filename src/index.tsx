@@ -1234,9 +1234,6 @@ backgroundColor: "#171F14",
     }
   };
 
-  const price =
-    "Preço: $" + item.salePrice + "Normal: $" + item.normalPrice + ")";
-
   return (
     <RN.View style={{ padding: 16 }}>
       <RN.Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 12 }}>
@@ -1267,22 +1264,38 @@ backgroundColor: "#171F14",
         <RN.FlatList
           data={games}
           keyExtractor={(item) => item.dealID}
-          renderItem={({ item }) => (
-            <RN.View
-              style={{
-                marginBottom: 10,
-                padding: 10,
-                borderWidth: 1,
-                borderColor: "#ccc",
-                borderRadius: 6,
-              }}
-            >
-              <RN.Text style={{ fontWeight: "bold", fontSize: 16 }}>
-                {item.title}
-              </RN.Text>
-              <RN.Text>{price}</RN.Text>
-            </RN.View>
-          )}
+          renderItem={({ item }) => {
+            const price =
+              "Preço: $" +
+              item.salePrice +
+              "Normal: $" +
+              item.normalPrice +
+              ")";
+            const discount =
+              "Desconto:" +
+              Math.round(
+                ((item.normalPrice - item.salePrice) / item.normalPrice) * 100
+              ) +
+              "%";
+
+            return (
+              <RN.View
+                style={{
+                  marginBottom: 10,
+                  padding: 10,
+                  borderWidth: 1,
+                  borderColor: "#ccc",
+                  borderRadius: 6,
+                }}
+              >
+                <RN.Text style={{ fontWeight: "bold", fontSize: 16 }}>
+                  {item.title}
+                </RN.Text>
+                <RN.Text>{price}</RN.Text>
+                <RN.Text>{discount}</RN.Text>
+              </RN.View>
+            );
+          }}
         />
       )}
     </RN.View>
