@@ -1235,8 +1235,9 @@ backgroundColor: "#171F14",
   };
 
   return (
-    <RN.View style={{ width: "100%",
-        padding: "10px", }}>
+    <RN.View style={{ width: '100%',
+flexDirection: 'row',
+padding: '10px', }}>
       <RN.Text style={{ color: "#FFF",
   fontSize: 10, }}>
         Filtros:
