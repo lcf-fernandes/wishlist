@@ -1248,7 +1248,10 @@ const buttonStyle = {
   };
 
   return (
-    <RN.View style={{ padding: 10 }}>
+    <RN.View style={{ 
+padding: 10,
+flexDirection: "row",
+  }}>
       <RN.Text style={{ color: "#FFF", fontSize: 12, marginBottom: 4 }}>
         Filtros:
       </RN.Text>
