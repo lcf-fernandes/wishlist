@@ -1315,7 +1315,7 @@ alignItems: 'center',
                 }}
               >
                 <RN.Text style={{ color: "#FFF",
-  fontSize: 12, }}>
+  fontSize: 12, fontWeight: 'bold'}}>
                   {item.title}
                 </RN.Text>
                 <RN.Text style={{ color: "#FFF",
