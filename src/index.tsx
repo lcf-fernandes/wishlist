@@ -1303,10 +1303,10 @@ alignItems: 'center',
 <RN.Image
                   source={{ uri: item.thumb }}
                   style={{
-                    width: 80,
-                    height: 80,
+                    width: 50,
+                    height: 50,
                     borderRadius: 6,
-                    marginRight: 10,
+                    marginRight: 2,
                   }}
                 />
               <RN.View
