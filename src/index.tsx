@@ -1295,6 +1295,11 @@ alignItems: 'center',
               "%";
 
             return (
+<RN.View
+                style={{
+                  flexDirection: 'row',
+                }}
+              >
               <RN.View
                 style={{
                   marginBottom: 10,
@@ -1310,6 +1315,7 @@ alignItems: 'center',
                 <RN.Text>{price}</RN.Text>
                 <RN.Text>{discount}</RN.Text>
               </RN.View>
+</RN.View>
             );
           }}
         />
