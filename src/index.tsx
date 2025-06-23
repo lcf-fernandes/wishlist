@@ -1201,7 +1201,9 @@ backgroundColor: "#171F14",
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
+  arrItems: [() => (
+  
+);] 
 }}/>
 , 
         (...args:any) => <Elements.FlatList2 pass={{
