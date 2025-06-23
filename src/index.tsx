@@ -1324,6 +1324,11 @@ alignItems: 'center',
                 <RN.Text style={{ color: "#FFF",
   fontSize: 10, }}>{discount}</RN.Text>
               </RN.View>
+<RN.View
+                style={{
+                  flex: 1,
+                }}
+              >
 <RN.Pressable style={buttonStyle}
                     onPress={() => {
                       
@@ -1331,6 +1336,7 @@ alignItems: 'center',
                   >
                     <RN.Text style={buttonTextStyle}>Comprar</RN.Text>
                   </RN.Pressable>
+</RN.View>
 </RN.View>
             );
           }}
