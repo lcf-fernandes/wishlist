@@ -1253,7 +1253,7 @@ padding: 10,
 flexDirection: 'row',
 alignItems: 'center',
   }}>
-      <RN.Text style={{ color: "#FFF", fontSize: 12, marginBottom: 4 }}>
+      <RN.Text style={{ color: "#FFF", fontSize: 10, marginBottom: 4 }}>
         Filtros:
       </RN.Text>
 
