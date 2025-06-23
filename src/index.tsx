@@ -1315,11 +1315,13 @@ alignItems: 'center',
                 }}
               >
                 <RN.Text style={{ color: "#FFF",
-  fontSize: 10, }}>
+  fontSize: 12, }}>
                   {item.title}
                 </RN.Text>
-                <RN.Text>{price}</RN.Text>
-                <RN.Text>{discount}</RN.Text>
+                <RN.Text style={{ color: "#FFF",
+  fontSize: 10, }}>{price}</RN.Text>
+                <RN.Text style={{ color: "#FFF",
+  fontSize: 10, }}>{discount}</RN.Text>
               </RN.View>
 </RN.View>
             );
