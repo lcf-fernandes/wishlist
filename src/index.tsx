@@ -1314,7 +1314,8 @@ alignItems: 'center',
                   flex: 1,
                 }}
               >
-                <RN.Text style={{ fontWeight: "bold", fontSize: 16 }}>
+                <RN.Text style={{ color: "#FFF",
+  fontSize: 10, }}>
                   {item.title}
                 </RN.Text>
                 <RN.Text>{price}</RN.Text>
