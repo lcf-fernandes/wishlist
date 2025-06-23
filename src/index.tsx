@@ -1249,7 +1249,7 @@ const buttonStyle = {
 
   return (
     <RN.View style={{ padding: 10 }}>
-      <RN.Text style={{ color: "#FFF", fontSize: 12, marginBottom: 8 }}>
+      <RN.Text style={{ color: "#FFF", fontSize: 12, marginBottom: 4 }}>
         Filtros:
       </RN.Text>
 
