@@ -1235,40 +1235,43 @@ backgroundColor: "#171F14",
   };
 
   return (
-    <RN.View style={{ width: '100%',
-flexDirection: 'row',
-padding: '10px',
-alignItems: 'center', }}>
-      <RN.Text style={{ color: "#FFF",
-  fontSize: 12, }}>
-        Filtros:
-      </RN.Text>
+    <RN.View style={{ padding: 16 }}>
+      <RN.Text style={{ color: "#FFF", fontSize: 12 }}>Filtros:</RN.Text>
 
-      <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button style={{ backgroundColor: '#212E1F',
-borderRadius: '10px',
-padding: '5px',
-alignItems: 'center', }}
-          title="Filtrar por Loja (Steam)"
-          onPress={() => fetchDeals("store")}
-        />
+      <RN.View
+        style={{
+          backgroundColor: "#212E1F",
+          borderRadius: "10px",
+          padding: "5px",
+          alignItems: "center",
+        }}
+        onPress={() => fetchDeals("store")}
+      >
+        <RN.Text style={{ color: "#FFF", fontSize: 10 }}>Filtrar por Loja (Steam)</RN.Text>
       </RN.View>
 
-      <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button style={{ backgroundColor: '#212E1F',
-borderRadius: '10px',
-padding: '5px',
-alignItems: 'center', }} title="Menor Preço" onPress={() => fetchDeals("lowest")} />
+      <RN.View
+        style={{
+          backgroundColor: "#212E1F",
+          borderRadius: "10px",
+          padding: "5px",
+          alignItems: "center",
+        }}
+        onPress={() => fetchDeals("lowest")}
+      >
+        <RN.Text style={{ color: "#FFF", fontSize: 10 }}>Menor Preço</RN.Text>
       </RN.View>
 
-      <RN.View style={{ marginBottom: 12 }}>
-        <RN.Button style={{ backgroundColor: '#212E1F',
-borderRadius: '10px',
-padding: '5px',
-alignItems: 'center', }}
-          title="Maior Desconto"
-          onPress={() => fetchDeals("discount")}
-        />
+      <RN.View
+        style={{
+          backgroundColor: "#212E1F",
+          borderRadius: "10px",
+          padding: "5px",
+          alignItems: "center",
+        }}
+        onPress={() => fetchDeals("discount")}
+      >
+        <RN.Text style={{ color: "#FFF", fontSize: 10 }}>Maior Desconto</RN.Text>
       </RN.View>
 
       {loading ? (
